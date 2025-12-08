@@ -1,57 +1,29 @@
 ---
 title: "Week 5 Worklog"
-date: "`r Sys.Date()`"
-weight: 1
+date: "2025-10-06"
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master Identity and Access Management (IAM) concepts.
+* Implement the "Principle of Least Privilege" for users and services.
+* Secure AWS resources using IAM Roles instead of long-term credentials.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | ---------- | --------------- | ------------------ |
+| 2 | - Learn IAM core components: Users, Groups, Policies (JSON structure).<br>- **Practice:** Create IAM Groups (Dev, Admin) and assign managed policies. | 06/10/2025 | 06/10/2025 | <https://docs.aws.amazon.com/iam/> |
+| 3 | - Learn about IAM Roles and Service-Linked Roles.<br>- **Scenario:** Create an IAM Role allowing EC2 to access S3 buckets (Read/Write) without Access Keys. | 07/10/2025 | 07/10/2025 | <https://docs.aws.amazon.com/iam/> |
+| 4 | - **Practice:** Attach the created IAM Role to an running EC2 instance.<br>- SSH into EC2 and verify S3 access via AWS CLI (`aws s3 ls`). | 08/10/2025 | 08/10/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Improve Account Security:<br>- Enable MFA (Multi-Factor Authentication) for the Root user and IAM users.<br>- Configure Password Policy (length, complexity). | 09/10/2025 | 09/10/2025 | <https://docs.aws.amazon.com/iam/> |
+| 6 | - Review AWS Shared Responsibility Model.<br>- Explore AWS CloudTrail to audit API calls (who did what, when). | 10/10/2025 | 10/10/2025 | <https://aws.amazon.com/compliance/shared-responsibility-model/> |
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Deeply understood the AWS Shared Responsibility Model and IAM logic.
+* Implemented strict permission boundaries using IAM Policies and Groups.
+* Successfully replaced hard-coded credentials (Access/Secret Keys) with secure IAM Roles for EC2 service access.
+* Enhanced account security by enforcing MFA and strong password policies.
+* Verified secure cross-service communication (EC2 talking to S3) without exposing secrets.

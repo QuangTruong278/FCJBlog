@@ -1,59 +1,29 @@
 ---
-title: "Worklog Tuần 9"
-date: "`r Sys.Date()`"
-weight: 1
+title: "Báo cáo công việc Tuần 9"
+date: "2025-11-03"
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu Tuần 9:
 
+* Hiểu về công nghệ Containerization và Docker.
+* Học cách viết Dockerfile để đóng gói ứng dụng.
+* Sử dụng Amazon Elastic Container Registry (ECR) để lưu trữ và quản lý Docker images.
 
-### Mục tiêu tuần 9:
+### Các nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | ---------- | --------------- | ------------------ |
+| 2 | - Giới thiệu về Containers so với Máy ảo (VM).<br>- Cài đặt Docker Engine trên EC2 instance (hoặc máy cá nhân).<br>- Học các lệnh Docker cơ bản (`run`, `ps`, `images`, `stop`). | 03/11/2025 | 03/11/2025 | <https://docs.docker.com/get-started/> |
+| 3 | - **Thực hành:** Viết `Dockerfile` cho một ứng dụng web đơn giản (Python/Node.js).<br>- Build Docker image trên máy local. | 04/11/2025 | 04/11/2025 | <https://docs.docker.com/engine/reference/builder/> |
+| 4 | - Giới thiệu về Amazon ECR.<br>- Tạo một private repository trong Amazon ECR.<br>- Cấu hình AWS CLI để xác thực Docker với ECR. | 05/11/2025 | 05/11/2025 | <https://docs.aws.amazon.com/AmazonECR/> |
+| 5 | - **Thực hành:** Gắn thẻ (Tag) cho Docker image và đẩy (Push) lên Amazon ECR repository.<br>- Kiểm tra image trên AWS Console. | 06/11/2025 | 06/11/2025 | <https://docs.aws.amazon.com/AmazonECR/> |
+| 6 | - **Triển khai:** Khởi chạy một EC2 instance mới.<br>- Kéo (Pull) image từ ECR về và chạy container.<br>- Kiểm tra ứng dụng hoạt động bình thường. | 07/11/2025 | 07/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Kết quả đạt được trong Tuần 9:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 9:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu rõ lợi ích của container hóa so với ảo hóa truyền thống.
+* Đóng gói thành công ứng dụng cũ bằng Docker (viết Dockerfile tối ưu).
+* Nắm vững quy trình build, tag và push image lên registry.
+* Sử dụng Amazon ECR làm nơi lưu trữ Docker image an toàn và riêng tư.
+* Triển khai ứng dụng từ container image, đảm bảo tính nhất quán giữa các môi trường.

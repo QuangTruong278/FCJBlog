@@ -1,59 +1,28 @@
 ---
-title: "Worklog Tuần 11"
-date: "`r Sys.Date()`"
-weight: 2
+title: "Báo cáo công việc Tuần 11"
+date: "2025-11-17"
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu Tuần 11:
 
+* Triển khai khả năng quan sát (observability) cho hạ tầng AWS.
+* Cấu hình CloudWatch Alarms để phát hiện sự cố chủ động.
+* Tập trung logs và trực quan hóa các chỉ số trên Dashboards.
 
-### Mục tiêu tuần 11:
+### Các nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | ---------- | --------------- | ------------------ |
+| 2 | - Khám phá các khái niệm Amazon CloudWatch: Namespaces, Metrics, Dimensions.<br>- Kiểm tra các chỉ số EC2 tiêu chuẩn (CPU, Status Checks, Network). | 17/11/2025 | 17/11/2025 | <https://docs.aws.amazon.com/cloudwatch/> |
+| 3 | - **Thực hành:** Tạo một CloudWatch Alarm.<br>- Điều kiện: Gửi email thông báo (qua SNS topic) nếu CPU Utilization > 80% trong 5 phút. | 18/11/2025 | 18/11/2025 | <https://docs.aws.amazon.com/cloudwatch/> |
+| 4 | - Tìm hiểu về CloudWatch Logs.<br>- Cài đặt và cấu hình Unified CloudWatch Agent trên EC2 để đẩy logs hệ điều hành (syslog/messages) lên CloudWatch. | 19/11/2025 | 19/11/2025 | <https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html> |
+| 5 | - Cấu hình Custom Metrics: Giám sát dung lượng RAM và Ổ cứng (Disk Space) - các chỉ số không có sẵn mặc định. | 20/11/2025 | 20/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Dashboarding:** Tạo một CloudWatch Dashboard tập trung.<br>- Thêm các widget hiển thị CPU, Memory của EC2, lượng gọi API Gateway, và lỗi Lambda. | 21/11/2025 | 21/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Kết quả đạt được trong Tuần 11:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 11:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thiết lập hệ thống giám sát chủ động cho các thành phần hạ tầng quan trọng.
+* Cấu hình cảnh báo tự động (Alarms + SNS) giúp giảm thời gian phản hồi sự cố.
+* Có được cái nhìn sâu hơn vào hiệu suất nội tại của hệ thống (RAM/Disk) nhờ CloudWatch Agent.
+* Xây dựng Dashboard vận hành chuyên nghiệp để trực quan hóa sức khỏe hệ thống theo thời gian thực.

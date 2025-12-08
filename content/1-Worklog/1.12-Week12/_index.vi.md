@@ -1,58 +1,29 @@
 ---
-title: "Worklog Tuần 12"
-date: "`r Sys.Date()`"
-weight: 2
+title: "Báo cáo công việc Tuần 12"
+date: "2025-11-24"
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu Tuần 12:
 
-### Mục tiêu tuần 12:
+* Tổng hợp toàn bộ kiến thức và dự án đã làm thành báo cáo cuối khóa.
+* Rà soát và tối ưu hóa các tài nguyên đã tạo.
+* Dọn dẹp môi trường AWS để tránh phát sinh chi phí ngoài ý muốn (Quản lý chi phí).
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | ---------- | --------------- | ------------------ |
+| 2 | - **Rà soát:** Kiểm kê tất cả tài nguyên đang hoạt động ở mọi regions (EC2, RDS, NAT Gateways, Elastic IPs, ALBs).<br>- Xác định các tài nguyên không còn cần thiết. | 24/11/2025 | 24/11/2025 | AWS Billing Dashboard |
+| 3 | - **Dọn dẹp:** Terminate EC2 instances, xóa RDS snapshots, release Elastic IPs, và xóa NAT Gateways để dừng tính phí.<br>- Chỉ giữ lại các tài nguyên thuộc Free Tier nếu cần thiết. | 25/11/2025 | 25/11/2025 | AWS Billing Dashboard |
+| 4 | - **Tài liệu hóa:** Hoàn thiện "Báo cáo Thực tập Cuối khóa" (Dự án Hugo).<br>- Tập hợp lại tất cả các sơ đồ kiến trúc đã vẽ trong suốt 12 tuần. | 26/11/2025 | 26/11/2025 | |
+| 5 | - Chuẩn bị slide thuyết trình cho buổi bảo vệ/tổng kết thực tập.<br>- Chạy thử demo các dự án chính (CI/CD Pipeline, Serverless API). | 27/11/2025 | 27/11/2025 | |
+| 6 | - Tự đánh giá về quá trình thực tập.<br>- Nộp worklog và báo cáo cuối cùng cho mentor/người hướng dẫn.<br>- Chính thức hoàn thành lộ trình 12 tuần. | 28/11/2025 | 28/11/2025 | |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kết quả đạt được trong Tuần 12:
 
-
-### Kết quả đạt được tuần 12:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành xuất sắc lộ trình thực tập DevOps/AWS toàn diện trong 12 tuần.
+* Bàn giao Báo cáo Cuối khóa chất lượng cao, ghi lại chi tiết các triển khai kỹ thuật.
+* Thực hiện dọn dẹp triệt để môi trường AWS, đảm bảo không phát sinh chi phí ngoài dự kiến.
+* Củng cố kiến thức xuyên suốt các mảng Networking, Compute, Database, Security, DevOps và Serverless.
+* Sẵn sàng cho buổi thuyết trình cuối cùng và các bước phát triển sự nghiệp Cloud/DevOps tiếp theo.

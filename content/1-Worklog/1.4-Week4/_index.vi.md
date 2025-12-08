@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 4"
-date: "`r Sys.Date()`"
-weight: 1
+title: "Báo cáo công việc Tuần 4"
+date: "2025-09-29"
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu Tuần 4:
 
+* Triển khai tính sẵn sàng cao (High Availability - HA) và khả năng mở rộng (Scalability) cho ứng dụng web.
+* Làm chủ cấu hình Application Load Balancer (ALB) và Auto Scaling Group (ASG).
+* Thực hiện stress test để kiểm chứng khả năng tự động mở rộng.
 
-### Mục tiêu tuần 4:
+### Các nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | ---------- | --------------- | ------------------ |
+| 2 | - Tìm hiểu các loại Elastic Load Balancing (ELB): ALB vs NLB.<br>- Tạo Target Groups và đăng ký targets.<br>- **Thực hành:** Tạo một Application Load Balancer. | 29/09/2025 | 29/09/2025 | <https://docs.aws.amazon.com/elasticloadbalancing/> |
+| 3 | - Hiểu về Amazon Machine Image (AMI).<br>- **Thực hành:** Tạo AMI tùy chỉnh từ Web Server (EC2) đã tạo ở Tuần 3 (đã cài sẵn LAMP stack). | 30/09/2025 | 30/09/2025 | <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html> |
+| 4 | - Học về Launch Templates và Auto Scaling Groups (ASG).<br>- Cấu hình Scaling Policies (ví dụ: Target Tracking Scaling khi CPU > 50%). | 01/10/2025 | 01/10/2025 | <https://docs.aws.amazon.com/autoscaling/> |
+| 5 | - **Tích hợp:** Gắn Auto Scaling Group vào Application Load Balancer.<br>- Đảm bảo cấu hình Health Check chính xác. | 02/10/2025 | 02/10/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Stress Test:** Giả lập lượng truy cập lớn vào ALB DNS.<br>- Quan sát EC2 instances tự động scale out (thêm máy mới).<br>- Kiểm chứng khả năng "Self-healing" bằng cách tắt thủ công một instance. | 03/10/2025 | 03/10/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Kết quả đạt được trong Tuần 4:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 4:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Tạo thành công một AMI (Amazon Machine Image) tùy chỉnh để triển khai ứng dụng nhanh chóng.
+* Thiết kế và xây dựng kiến trúc có tính sẵn sàng cao sử dụng Application Load Balancer (ALB) để phân phối tải.
+* Cấu hình Auto Scaling Group (ASG) đảm bảo ứng dụng có thể chịu được các mức tải khác nhau.
+* Kiểm chứng tính đàn hồi (elasticity) của hệ thống:
+    * **Scale-out:** Tự động thêm server khi CPU tăng cao.
+    * **High Availability:** Tự động thay thế các server bị lỗi hoặc bị tắt.

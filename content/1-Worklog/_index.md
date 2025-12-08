@@ -6,34 +6,30 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+**On this page**, you will find the weekly breakdown of my internship at First Cloud Journey. Over the course of **12 weeks** (from September 8th to November 28th), I followed a structured roadmap to master Cloud Computing and DevOps practices on AWS.
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
+The worklog below details the progression from basic AWS concepts to advanced topics like Serverless, IaC, and CI/CD:
 
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
+**Week 1:** [Getting familiar with AWS and Basic Services (EC2, CLI)](1.1-week1/)
 
-**Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
+**Week 2:** [Deep dive into Networking (VPC) & Storage (S3)](1.2-week2/)
 
-**Week 2:** [Doing task A...](1.2-week2/)
+**Week 3:** [Managed Databases (RDS) & Web Server Integration](1.3-week3/)
 
-**Week 3:** [Doing task B...](1.3-week3/)
+**Week 4:** [High Availability with Load Balancing (ALB) & Auto Scaling (ASG)](1.4-week4/)
 
-**Week 4:** [Doing task C...](1.4-week4/)
+**Week 5:** [Identity and Access Management (IAM) & Security Best Practices](1.5-week5/)
 
-**Week 5:** [Doing task D...](1.5-week5/)
+**Week 6:** [Email Integration with Amazon SES (Simple Email Service)](1.6-week6/)
 
-**Week 6:** [Doing task E...](1.6-week6/)
+**Week 7:** [Infrastructure as Code (IaC) with Terraform](1.7-week7/)
 
-**Week 7:** [Doing task G...](1.7-week7/)
+**Week 8:** [Building CI/CD Pipelines with AWS Developer Tools](1.8-week8/)
 
-**Week 8:** [Doing task H...](1.8-week8/)
+**Week 9:** [Containerization with Docker & Amazon ECR](1.9-week9/)
 
-**Week 9:** [Doing task I...](1.9-week9/)
+**Week 10:** [Serverless Computing with AWS Lambda & API Gateway](1.10-week10/)
 
-**Week 10:** [Doing task L...](1.10-week10/)
+**Week 11:** [System Monitoring & Logging with Amazon CloudWatch](1.11-week11/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
-
-**Week 12:** [Doing task N...](1.12-week12/)
+**Week 12:** [Final Project Review, Optimization & Resource Cleanup](1.12-week12/)

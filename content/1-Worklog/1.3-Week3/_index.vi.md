@@ -1,59 +1,29 @@
 ---
-title: "Worklog Tuần 3"
-date: "`r Sys.Date()`"
-weight: 1
+title: "Báo cáo công việc Tuần 3"
+date: "2025-09-22"
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu Tuần 3:
 
+* Tìm hiểu về Cơ sở dữ liệu quan hệ được quản lý trên AWS (Amazon RDS).
+* Cấu hình bảo mật mạng giữa Compute (EC2) và Database (RDS).
+* Triển khai một ứng dụng web động đơn giản kết nối với cơ sở dữ liệu.
 
-### Mục tiêu tuần 3:
+### Các nhiệm vụ thực hiện trong tuần:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | ---------- | --------------- | ------------------ |
+| 2 | - Học các khái niệm RDS (Multi-AZ, Read Replicas, Backups, Maintenance Window).<br>- **Thực hành:** Tạo một MySQL RDS instance (Free Tier). | 22/09/2025 | 22/09/2025 | <https://docs.aws.amazon.com/rds/> |
+| 3 | - Cấu hình Security Groups: Cho phép lưu lượng từ EC2 Security Group vào RDS Security Group trên cổng 3306.<br>- Tìm hiểu về RDS endpoints. | 23/09/2025 | 23/09/2025 | <https://docs.aws.amazon.com/rds/> |
+| 4 | - Cài đặt LAMP stack (Linux, Apache, MySQL/MariaDB, PHP) trên một EC2 instance.<br>- Chuẩn bị một script PHP kết nối mẫu. | 24/09/2025 | 24/09/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **Thực hành:** Kết nối ứng dụng PHP trên EC2 tới RDS endpoint.<br>- Xử lý sự cố kết nối (Troubleshoot VPC, Subnets, SG). | 25/09/2025 | 25/09/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Tìm hiểu về RDS Snapshots (Manual vs Automated).<br>- **Thực hành:** Tạo snapshot thủ công và khôi phục (restore) ra một DB instance mới. | 26/09/2025 | 26/09/2025 | <https://docs.aws.amazon.com/rds/> |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Kết quả đạt được trong Tuần 3:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Khởi tạo thành công một cơ sở dữ liệu MySQL được quản lý hoàn toàn bằng Amazon RDS.
+* Thực hiện các biện pháp bảo mật tốt nhất bằng cách chỉ giới hạn quyền truy cập cơ sở dữ liệu cho Web Server (EC2) thông qua Security Group.
+* Triển khai thành công ứng dụng web động (LAMP stack) trên EC2.
+* Thiết lập kết nối thành công giữa Tầng Ứng dụng (App Tier) và Tầng Dữ liệu (Data Tier).
+* Thực hiện các thao tác sao lưu và khôi phục cơ sở dữ liệu bằng RDS Snapshots.

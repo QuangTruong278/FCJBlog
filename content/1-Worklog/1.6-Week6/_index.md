@@ -1,57 +1,28 @@
 ---
 title: "Week 6 Worklog"
-date: "`r Sys.Date()`"
-weight: 1
+date: "2025-10-13"
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand Amazon Simple Email Service (SES) and its use cases (Transactional vs Marketing).
+* Verify Identities (Email/Domain) and understand Sandbox restrictions.
+* Programmatically send emails using AWS SDK (Boto3 with Python) on EC2.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | ---------- | --------------- | ------------------ |
+| 2 | - Introduction to Amazon SES.<br>- **Practice:** Verify an Email Identity (Sender and Receiver) in the SES Console.<br>- Understand the concept of "SES Sandbox" mode. | 13/10/2025 | 13/10/2025 | <https://docs.aws.amazon.com/ses/> |
+| 3 | - Configure SMTP Credentials for SES.<br>- Learn how to request production access (moving out of Sandbox). | 14/10/2025 | 14/10/2025 | <https://docs.aws.amazon.com/ses/> |
+| 4 | - **Coding:** Write a simple Python script using `boto3` library to send a test email via SES API.<br>- Handle exceptions (e.g., MessageRejected). | 15/10/2025 | 15/10/2025 | <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ses.html> |
+| 5 | - **Integration:** Deploy the Python script to an EC2 instance.<br>- Configure IAM Role for EC2 to allow `ses:SendEmail` permission (instead of using hardcoded SMTP credentials). | 16/10/2025 | 16/10/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Test:** Run the script on EC2 to trigger an automated email notification.<br>- Monitor sending statistics in the SES Console (Deliverability, Bounce rate). | 17/10/2025 | 17/10/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully configured Amazon SES environment and verified email identities.
+* Understood the security best practices by using IAM Roles for EC2 to authorize email sending.
+* Developed a Python automation script using AWS SDK (Boto3) to interact with AWS services.
+* Integrated email notification capability into the infrastructure, enabling automated alerts.
