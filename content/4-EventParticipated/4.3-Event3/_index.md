@@ -70,6 +70,6 @@ I used to be confused between ECS and EKS. The breakdown in the afternoon sessio
 The demo on **Full-stack observability** using CloudWatch and X-Ray was an eye-opener. Seeing a request traced from the load balancer down to the database query showed the power of modern monitoring.
 
 #### Some event photos
-![](Hinh6.jpg) ![](Hinh7.jpg) ![](Hinh3.jpg) ![](Hinh4.jpg) ![](Hinh5.jpg)
+![](/images/Hinh6.jpg) ![](/images/Hinh7.jpg) ![](/images/Hinh3.jpg) ![](/images/Hinh4.jpg) ![](/images/Hinh5.jpg)
 
 > Overall, this event provided the essential toolkit for a modern Cloud Engineer: CI/CD, IaC, Containers, and Monitoring.

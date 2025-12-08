@@ -85,6 +85,6 @@ I was impressed by the session on **AI-Driven Development Lifecycle (AI-DLC)**. 
 The session on **AI Agents** by Michael Armentano opened my eyes to the difference between simple automation and intelligent agents. It motivated me to research more about how to build autonomous agents on AWS.
 
 #### Some event photos
-![](Hinh1.jpg) ![](Hinh2.jpg)
+![](/images/Hinh1.jpg) ![](/images/Hinh2.jpg)
 
 > Overall, the event bridged the gap between high-level AI strategy and the practical technical steps needed to implement it (Data, Security, and Agents).

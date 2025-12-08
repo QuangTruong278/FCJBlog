@@ -70,6 +70,6 @@ Tôi từng khá bối rối giữa ECS và EKS. Phần phân tích buổi chi�
 Phần demo về **Full-stack observability** sử dụng CloudWatch và X-Ray thực sự mở mang tầm mắt. Việc nhìn thấy một request được truy vết từ Load Balancer xuống tận câu lệnh Database cho thấy sức mạnh của việc giám sát hiện đại.
 
 #### Một số hình ảnh tại sự kiện
-![](Hinh1.jpg) ![](Hinh2.jpg) ![](Hinh3.jpg) ![](Hinh4.jpg) ![](Hinh5.jpg)
+![](/images/Hinh1.jpg) ![](/images/Hinh2.jpg) ![](/images/Hinh3.jpg) ![](/images/Hinh4.jpg) ![](/images/Hinh5.jpg)
 
 > Tổng kết lại, sự kiện này đã trang bị bộ công cụ thiết yếu cho một Kỹ sư Cloud hiện đại: CI/CD, IaC, Containers và Monitoring.
