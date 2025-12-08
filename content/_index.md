@@ -10,7 +10,7 @@ chapter: false
 ### Student Information:
 &emsp; **Full Name:** Van Quang Truong
 
-&emsp; **Phone Number:** 0765423702
+&emsp; **Phone Number:** 0765243702
 
 &emsp; **Email:** truongvqse182458@fpt.edu.vn
 
