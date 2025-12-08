@@ -1,125 +1,75 @@
 ---
-title: "Event 1"
+title: "Báo cáo sự kiện: Agentic AI Journey"
 date: "`r Sys.Date()`"
-weight: 1
+weight: 6
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: " <b> 4.6. </b> "
 ---
+# Báo cáo tổng hợp: “Agentic AI: Từ Kiến trúc đến Triển khai”
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu sự kiện
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+- Hiểu các khái niệm cốt lõi của Agentic AI (AI hành động) và AWS Bedrock Agents.
+- Khám phá các trường hợp sử dụng thực tế (Use Cases) để xây dựng luồng công việc tự động (Agentic Workflow).
+- Đi sâu vào kỹ thuật Điều phối Agent và Tối ưu hóa ngữ cảnh (mức độ chuyên sâu L300).
+- Trải nghiệm thực hành: Xây dựng một Agent sử dụng CloudThinker và AWS Bedrock.
 
-### Mục Đích Của Sự Kiện
+### Diễn giả
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- **Nguyễn Gia Hưng** – Trưởng bộ phận Kiến trúc sư Giải pháp
+- **Kiên Nguyễn** – Kiến trúc sư Giải pháp (AWS)
+- **Việt Phạm** – Founder & CEO
+- **Thắng Tôn** – Co-founder & COO (CloudThinker)
+- **Henry Bùi** – Giám đốc Kỹ thuật (CloudThinker)
+- **Kha Vân** – Technical Lead/Người hướng dẫn
 
-### Danh Sách Diễn Giả
+### Nội dung chính (Highlights)
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+#### AWS Bedrock Agent Core
+- **Khái niệm:** Chuyển dịch từ các "Chatbot" thụ động sang các "Agent" chủ động có khả năng thực thi các tác vụ đa bước.
+- **Thành phần:** Giải phẫu cấu trúc của một Agent: Foundation Model (Bộ não) + Action Groups (Công cụ/API) + Knowledge Bases (RAG).
+- **Cơ chế:** Cách Bedrock Agents chia nhỏ một yêu cầu phức tạp của người dùng thành chuỗi các bước logic (Chain-of-Thought) và thực thi chúng qua Lambda functions.
 
-### Nội Dung Nổi Bật
+#### Ứng dụng thực tế & CloudThinker
+- **Use Cases:** Tạo ra các quy trình nơi AI tự động xử lý công việc kinh doanh (đặt lịch, xử lý đơn hàng, phân tích dữ liệu) mà không cần con người can thiệp.
+- **Điều phối (L300 Deep Dive):** Anh Henry Bùi chia sẻ các kỹ thuật nâng cao về quản lý tương tác phức tạp giữa các agent. Trọng tâm là **Tối ưu hóa ngữ cảnh (Context Optimization)**—đảm bảo AI giữ được thông tin quan trọng trong các hội thoại dài mà không bị tràn bộ nhớ (token limits) hoặc mất tập trung.
+- **Nền tảng CloudThinker:** Giới thiệu framework chuyên dụng giúp đơn giản hóa việc điều phối các luồng agent phức tạp trên nền tảng AWS.
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Workshop thực hành: CloudThinker Hack
+- **Thực chiến:** Dưới sự hướng dẫn của anh Kha Vân, người tham dự đã thiết lập môi trường và triển khai một agent hoạt động thực tế.
+- **Tích hợp:** Kết nối agent với các công cụ bên ngoài và quan sát cách nó suy luận để giải quyết vấn đề theo thời gian thực.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+### Bài học rút ra (Key Takeaways)
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Bước chuyển mình sang "Agency"
+- Tương lai của AI không chỉ là tạo sinh văn bản, mà là hành động. "Agentic AI" là biên giới tiếp theo nơi các mô hình trở thành người ra quyết định.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### Ngữ cảnh là Vua (Context is King)
+- Trong các luồng công việc phức tạp, quản lý "Trạng thái" (State) và "Ngữ cảnh" là thách thức lớn nhất. Các kỹ thuật tối ưu hóa (như tóm tắt ngữ cảnh hoặc lưu giữ chọn lọc) là yếu tố sống còn cho các agent chạy production.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### Sự phức tạp trong điều phối
+- Xây dựng một agent thì dễ; làm cho nhiều agent phối hợp nhịp nhàng đòi hỏi một lớp điều phối mạnh mẽ (điều mà các công cụ như CloudThinker giải quyết).
 
-#### Domain-Driven Design (DDD)
+### Ứng dụng vào công việc
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+- **Thử nghiệm Action Groups:** Tôi sẽ thử thêm một "Action Group" đơn giản vào dự án Bedrock của mình (ví dụ: Lambda function truy vấn database) để biến chatbot hiện tại thành một basic agent.
+- **Nghiên cứu quản lý ngữ cảnh:** Tìm hiểu sâu hơn về cách tối ưu context cho các tác vụ dài hơi, dựa trên kiến thức từ phiên L300.
+- **Kiểm thử hành vi Agent:** Áp dụng tư duy kiểm thử để đánh giá xem agent có thực hiện đúng hành động (action) hay không trước khi deploy.
 
-#### Event-Driven Architecture
+### Trải nghiệm sự kiện
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+Sự kiện **"Agentic AI"** là sự kết hợp hoàn hảo giữa lý thuyết và thực hành.
 
-#### Compute Evolution
+#### Chiều sâu kỹ thuật (L300)
+Tôi đặc biệt đánh giá cao phiên chia sẻ **L300** của anh Henry Bùi. Thông thường các sự kiện chỉ dừng ở mức tổng quan, nhưng phiên này đi sâu vào thách thức kỹ thuật của việc tối ưu hóa Context, mang lại kiến thức kiến trúc rất giá trị.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+#### Phần "Hack" thực tế
+Phiên thực hành cuối giờ rất năng lượng và hữu ích. Việc nhìn thấy agent do mình cấu hình thực sự thực thi một tác vụ (thay vì chỉ trả lời bằng chữ) là một khoảnh khắc "vỡ lẽ" về sức mạnh của hệ sinh thái Bedrock.
 
-#### Amazon Q Developer
+#### Networking
+Thời gian ăn trưa và giao lưu giúp tôi có cơ hội thảo luận với đội ngũ CloudThinker về vấn đề độ trễ (latency) trong các luồng agent, thu được nhiều mẹo thực tế cho dự án cá nhân.
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### Một số hình ảnh tại sự kiện
+*Thêm ảnh sự kiện của bạn vào đây*
 
-### Những Gì Học Được
-
-#### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+> Tổng kết lại, sự kiện đã thu hẹp khoảng cách giữa "sự hào nhoáng" về AI Agents và "cách làm" thực tế để xây dựng chúng trên AWS.

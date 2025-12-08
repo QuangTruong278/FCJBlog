@@ -1,126 +1,90 @@
 ---
-title: "Event 1"
-date: "`r Sys.Date()`"
-weight: 1
+title: "AWS Event Report: GenAI & Data Strategies"
+date: "18 September 2025"
+weight: 2
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: “AWS GenAI & Data Revolution”
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Understand the strategic roadmap for Generative AI adoption on AWS.
+- Learn how to build a unified data foundation to support AI and analytics workloads.
+- Explore the AI-Driven Development Lifecycle (AI-DLC) and the future of software implementation.
+- Master best practices for securing GenAI applications and leveraging AI Agents.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+**Keynote & Panelists:**
+- **Eric Yeo** – Country General Manager, Vietnam, Cambodia, Laos & Myanmar, AWS
+- **Jaime Valles** – VP, General Manager APJ, AWS
+- **Dr. Jens Lottner** – CEO, Techcombank
+- **Ms. Trang Phung** – CEO & Co-Founder, U2U Network
+- **Jeff Johnson** – Managing Director, ASEAN, AWS (Moderator)
+
+**Technical Track Speakers:**
+- **Jun Kai Loke** – AI/ML Specialist SA, AWS
+- **Kien Nguyen** – Solutions Architect, AWS
+- **Binh Tran** – Senior Solutions Architect, AWS
+- **Taiki Dang** – Solutions Architect, AWS
+- **Michael Armentano** – Principal WW GTM Specialist, AWS
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### Navigating the GenAI Revolution (Executive Panel)
+- **Leadership Strategy:** Discussion on how executives can steer organizations through rapid GenAI advancements.
+- **Culture of Innovation:** Insights from ELSA Corp, Nexttech Group, and TymeX on aligning AI initiatives with business objectives and managing organizational change.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+#### Building a Unified Data Foundation
+- **Infrastructure:** Strategies for constructing a scalable data foundation on AWS tailored for AI/Analytics.
+- **Components:** Deep dive into data ingestion, storage, processing, and governance.
+- **Goal:** Ensuring organizations can effectively manage data to fuel advanced AI initiatives.
 
-#### Transitioning to modern application architecture – Microservices
+#### AI-Driven Development Lifecycle (AI-DLC)
+- **Shift in Paradigm:** Moving from "AI as an assistant" to "AI as a central collaborator."
+- **Integration:** Integrating AI-powered execution with human oversight to drastically improve software development speed and quality.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### Securing Generative AI Applications
+- **Multi-layer Security:** Addressing challenges at the infrastructure, model, and application layers.
+- **Best Practices:** Implementing zero-trust architecture, encryption, continuous monitoring, and fine-grained access controls to safeguard data confidentiality.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
-
-#### Domain-Driven Design (DDD)
-
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+#### Beyond Automation: AI Agents
+- **Productivity Multipliers:** AI agents are evolving from simple tools to intelligent partners.
+- **Autonomy:** These agents learn, adapt, and execute complex tasks autonomously, transforming operations from manual drudgery to exponential efficiency.
 
 ### Key Takeaways
 
-#### Design Mindset
+#### Strategic Insight
+- **Data is Key:** A robust, unified data foundation is the prerequisite for any successful GenAI strategy.
+- **Security First:** Security cannot be an afterthought; it must be embedded in the model and infrastructure layers (Zero Trust).
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+#### Technical Evolution
+- **AI-DLC:** The software development lifecycle is changing fundamentally. We need to adapt to working *with* AI as a partner, not just a tool.
+- **Agentic Workflow:** The future belongs to AI Agents that can reason and act, not just generate text.
 
 ### Applying to Work
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Review Data Strategy:** Assess current data infrastructure to ensure it is unified and ready for AI workloads (referencing AWS best practices).
+- **Experiment with AI Agents:** Explore building simple AI Agents for repetitive operational tasks to boost team productivity.
+- **Security Audit:** Review current security measures for any AI/ML models currently in testing or production.
+- **Adopt AI-DLC:** Encourage the team to integrate AI coding assistants deeper into the dev workflow to improve speed.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Participating in the **"Gen AI and Data"** track provided a clear roadmap for the future of technology on AWS.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Insights from Industry Leaders
+The panel discussion with leaders from Techcombank and ELSA Corp was particularly inspiring, showing that GenAI is not just a technical trend but a core business driver that requires a cultural shift.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+#### Deep Dive into Tech
+I was impressed by the session on **AI-Driven Development Lifecycle (AI-DLC)**. It changed my perspective on how software will be built in the future—where AI is a collaborator, not just a helper.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+#### Future-Proofing
+The session on **AI Agents** by Michael Armentano opened my eyes to the difference between simple automation and intelligent agents. It motivated me to research more about how to build autonomous agents on AWS.
 
 #### Some event photos
-*Add your event photos here*  
+![](Hinh1.jpg) ![](Hinh2.jpg)
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, the event bridged the gap between high-level AI strategy and the practical technical steps needed to implement it (Data, Security, and Agents).

@@ -6,42 +6,45 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
+> Below are my honest reflections after 12 weeks of internship. These opinions are based on my personal experience transitioning from academic knowledge to real-world corporate practice.
 
 ### Overall Evaluation
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**1. Working Environment**
+The environment at FCJ is highly technical and fast-paced. Instead of "hand-holding," this environment pushes interns to be independent and proactive in their research. Initially, I felt a bit overwhelmed, but this professional pressure helped me adapt quickly to industry standards. This is a place for those who truly want to do "real work" rather than just observe.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+**2. Support from Mentor / Team Admin**
+The Mentors are quite strict but fair. When I encountered errors, instead of providing the solution immediately, the Mentor guided me on how to read logs and apply Root Cause Analysis. Although this approach takes time initially, it is extremely effective in honing a troubleshooting mindset. The Admin Team is very quick to offer support.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**3. Relevance of Work to Academic Major**
+The gap between university theory and workplace reality is quite significant. While the university provides foundational programming thinking, this internship filled the gaps regarding **Infrastructure, Networking, and Deployment Strategies**. The tasks related to AWS Services and DevOps processes were entirely new and highly relevant to a Cloud Engineer career.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+**4. Learning & Skill Development Opportunities**
+Beyond hard skills (AWS, Docker, IaC), the most valuable lesson I received was **"System Thinking."** I learned to view software not just as lines of code, but as a complete lifecycle from development and operation to monitoring. The weekly technical workshops (GenAI, Security) were high-quality value-adds that broadened my perspective.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**5. Company Culture & Team Spirit**
+The culture of "Knowledge Sharing" here is very strong. No question is considered "bad" if I have genuinely tried to research it beforehand. I appreciate the transparency in technical discussions, where even interns' opinions are listened to during architecture reviews.
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+**6. Internship Policies / Benefits**
+The internship roadmap is structured methodically week-by-week. The internship is fair, with flexible working hours and fully equipped facilities.
 
 ---
 
 ### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+
+**What did you find most satisfying during your internship?**
+The moment I successfully built a fully automated CI/CD pipeline, deploying code to EC2 without manual intervention. That was the tangible result connecting all the disjointed concepts I had learned.
+
+**What do you think the company should improve for future interns?**
+I suggest having more in-depth **Code Review** sessions specifically for interns. Sometimes my code "works," but I am not sure if it follows best practices or if it is optimized for cost/security. Receiving detailed feedback on code quality would help us improve faster.
+
+**If recommending to a friend, would you suggest they intern here? Why or why not?**
+**Definitely yes.** However, I would clarify beforehand: I only recommend FCJ to friends who are truly proactive and highly disciplined. This is not a place for passive learners, but it is an excellent launchpad for those who are serious about becoming a Cloud Engineer.
 
 ---
 
 ### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+
+* **Suggestion:** It would be great to have a "Mock Interview" session at the end of the internship to help us mentally prepare for applying for official jobs.
+* **Expectation:** I hope to maintain a connection with the FCJ community.
+* **Closing:** Thank you to the FCJ team for a challenging but very rewarding 3 months. The strict standards here have helped me become a better version of myself.
