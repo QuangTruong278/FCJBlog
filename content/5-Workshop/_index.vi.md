@@ -16,7 +16,7 @@ Hoàn thành việc cài đặt và cấu hình các dịch vụ AWS cần thi�
 ## Kiến trúc
 Chúng ta sẽ bám sát kiến trúc sau:
 
-![Auction System Architecture](/static/images/2-Proposal/auction-system-architecture.png)
+![Auction System Architecture](/static/images/2-Proposal/auction-system-architecture.jpg)
 
 ## Các bước thực hiện
 1. **Chuẩn bị (Preparation)**: Thiết lập VPC, IAM Role.
@@ -25,3 +25,4 @@ Chúng ta sẽ bám sát kiến trúc sau:
 4. **Phân phối (Distribution)**: Cấu hình Load Balancer, CloudFront, Route 53.
 5. **CI/CD**: Thiết lập quy trình triển khai tự động với GitLab CI.
 6. **Dọn dẹp (Clean up)**: Xóa tài nguyên sau khi hoàn thành.
+
