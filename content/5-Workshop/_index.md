@@ -16,7 +16,7 @@ Complete the installation and configuration of necessary AWS services to operate
 ## Architecture
 We will follow this architecture:
 
-![Auction System Architecture](/static/images/2-Proposal/auction-system-architecture.png)
+![Auction System Architecture](/static/images/2-Proposal/auction-system-architecture.jpg)
 
 ## Steps
 1. **Preparation**: Setup VPC, IAM Role.
@@ -25,3 +25,4 @@ We will follow this architecture:
 4. **Distribution**: Configure Load Balancer, CloudFront, Route 53.
 5. **CI/CD**: Setup automated deployment process with GitLab CI.
 6. **Clean up**: Delete resources after completion.
+
